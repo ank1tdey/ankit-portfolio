@@ -1229,6 +1229,239 @@
       align-items: flex-start;
     }
   }
+
+  /* =========================================================
+     LIGHT THEME
+     Dark mode remains the default.
+  ========================================================= */
+
+  html {
+    color-scheme: dark;
+  }
+
+  body,
+  header,
+  .section,
+  .skill,
+  .now-item,
+  .network,
+  .contact-form input,
+  .contact-form textarea,
+  .project-visual,
+  .tag,
+  .education-card,
+  .case,
+  .value,
+  footer {
+    transition:
+      background-color 0.28s ease,
+      color 0.28s ease,
+      border-color 0.28s ease,
+      box-shadow 0.28s ease;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 1;
+    border-radius: 50%;
+    transition: 0.25s ease;
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--purple);
+    transform: rotate(-8deg) scale(1.04);
+  }
+
+  .theme-toggle:focus-visible {
+    outline: 2px solid var(--purple);
+    outline-offset: 3px;
+  }
+
+  [data-theme="light"] {
+    color-scheme: light;
+  }
+
+  [data-theme="light"] body {
+    background: #f4f4f1;
+    color: #111111;
+  }
+
+  [data-theme="light"] body::before {
+    background-image:
+      linear-gradient(rgba(0,0,0,0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.045) 1px, transparent 1px);
+  }
+
+  [data-theme="light"] body::after {
+    background: rgba(139, 92, 246, 0.09);
+  }
+
+  [data-theme="light"] header {
+    background: rgba(244,244,241,0.86);
+  }
+
+  [data-theme="light"] .nav-links a {
+    color: #555555;
+  }
+
+  [data-theme="light"] .nav-links a:hover {
+    color: #111111;
+  }
+
+  [data-theme="light"] .nav-button {
+    border-color: #111111;
+    color: #111111;
+  }
+
+  [data-theme="light"] .nav-button:hover {
+    background: #111111;
+    color: #ffffff;
+  }
+
+  [data-theme="light"] .hero-meta,
+  [data-theme="light"] .hero-description,
+  [data-theme="light"] .skills-intro,
+  [data-theme="light"] .projects-head p,
+  [data-theme="light"] .ba-intro {
+    color: #666666;
+  }
+
+  [data-theme="light"] .hero-description strong {
+    color: #111111;
+  }
+
+  [data-theme="light"] .hero-title .outline {
+    -webkit-text-stroke-color: rgba(0,0,0,0.38);
+  }
+
+  [data-theme="light"] .marquee span {
+    color: #777777;
+  }
+
+  [data-theme="light"] .info-label,
+  [data-theme="light"] .skill-number,
+  [data-theme="light"] .project-index,
+  [data-theme="light"] .edu-box small,
+  [data-theme="light"] .footer-inner p {
+    color: #777777;
+  }
+
+  [data-theme="light"] .skill {
+    background: #ffffff;
+  }
+
+  [data-theme="light"] .skill:hover {
+    background: #eeeeeb;
+  }
+
+  [data-theme="light"] .skill p,
+  [data-theme="light"] .project-description,
+  [data-theme="light"] .case p,
+  [data-theme="light"] .now-item p,
+  [data-theme="light"] .value p,
+  [data-theme="light"] .resume-section p,
+  [data-theme="light"] .contact-copy {
+    color: #666666;
+  }
+
+  [data-theme="light"] .education-card,
+  [data-theme="light"] .case,
+  [data-theme="light"] .value {
+    background: #ffffff;
+  }
+
+  [data-theme="light"] .education-card::after {
+    color: rgba(0,0,0,0.035);
+  }
+
+  [data-theme="light"] .tag {
+    border-color: #d2d2cf;
+    color: #666666;
+  }
+
+  [data-theme="light"] .project-visual {
+    border-color: #d4d4d0;
+    background:
+      linear-gradient(135deg, rgba(139,92,246,0.16), transparent 55%),
+      #e9e9e5;
+  }
+
+  [data-theme="light"] .project-visual::before {
+    background-image:
+      linear-gradient(rgba(0,0,0,.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,.055) 1px, transparent 1px);
+  }
+
+  [data-theme="light"] .festek-feature {
+    box-shadow: 0 18px 60px rgba(0,0,0,0.07);
+  }
+
+  [data-theme="light"] .progress {
+    background: #d9d9d5;
+  }
+
+  [data-theme="light"] .resume-button,
+  [data-theme="light"] .submit {
+    background: #111111;
+    color: #ffffff;
+  }
+
+  [data-theme="light"] .resume-button:hover {
+    background: var(--purple);
+    color: #ffffff;
+  }
+
+  [data-theme="light"] .contact-link {
+    color: #555555;
+  }
+
+  [data-theme="light"] .contact-link:hover {
+    color: #111111;
+  }
+
+  [data-theme="light"] .contact-form input,
+  [data-theme="light"] .contact-form textarea {
+    border-color: #cfcfcb;
+    color: #111111;
+  }
+
+  [data-theme="light"] .contact-form input::placeholder,
+  [data-theme="light"] .contact-form textarea::placeholder {
+    color: #888888;
+  }
+
+  [data-theme="light"] .network {
+    border-color: #d0d0cc;
+    background: rgba(255,255,255,0.86);
+    color: #666666;
+  }
+
+  @media (max-width: 550px) {
+    .nav-actions {
+      gap: 6px;
+    }
+
+    .theme-toggle {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
 </style>
 </head>
 
@@ -1254,9 +1487,21 @@
         <a href="#contact">CONTACT</a>
       </nav>
 
-      <a href="#contact" class="nav-button">
-        Let's Talk
-      </a>
+      <div class="nav-actions">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to light theme"
+          title="Switch to light theme"
+        >
+          <span id="themeIcon" aria-hidden="true">💡</span>
+        </button>
+
+        <a href="#contact" class="nav-button">
+          Let's Talk
+        </a>
+      </div>
 
     </div>
   </header>
@@ -2212,6 +2457,43 @@
 
   <script>
 
+
+  /* -----------------------------
+     THEME TOGGLE
+  ----------------------------- */
+
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+
+  function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+
+    const isLight = theme === "light";
+
+    themeIcon.textContent = isLight ? "☀️" : "💡";
+    themeToggle.setAttribute(
+      "aria-label",
+      isLight ? "Switch to dark theme" : "Switch to light theme"
+    );
+    themeToggle.setAttribute(
+      "title",
+      isLight ? "Switch to dark theme" : "Switch to light theme"
+    );
+  }
+
+  const savedTheme = localStorage.getItem("ankit-theme");
+  applyTheme(savedTheme === "light" ? "light" : "dark");
+
+  themeToggle.addEventListener("click", () => {
+    const nextTheme =
+      document.documentElement.dataset.theme === "light"
+        ? "dark"
+        : "light";
+
+    localStorage.setItem("ankit-theme", nextTheme);
+    applyTheme(nextTheme);
+  });
+
   /* -----------------------------
      LIVE CLOCK
   ----------------------------- */
@@ -2347,6 +2629,5 @@ Sent from your portfolio website.`;
   });
 
 </script>
-
 </body>
 </html>
